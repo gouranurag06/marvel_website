@@ -1,0 +1,217 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Container for character images */
+.characterimg {
+    display: flex;
+    height: 330px;
+    width: 100%;
+    background-color: rgb(90, 88, 86);
+    margin: 50px auto;
+    justify-content: space-around;
+}
+
+/* Heading style */
+.heading {
+    font-size: large;
+    color: goldenrod;
+    text-align: center;
+}
+
+/* Character image styling */
+.charimg {
+    height: 207px;
+    width: 190px;
+    display: block;
+}
+
+/* Link styling for character text */
+.chartext {
+    text-decoration: none;
+}
+
+/* First child character image margin adjustment */
+.charimg:first-child {
+    margin-left: 2px;
+}
+
+/* Styling for text below the images */
+.neechevalatext {
+    padding-top: 70px;
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+/* General padding and transition effect */
+.mili {
+    padding: 4px;
+    transition: height 2s;
+}
+
+/* Hover effect for .mili elements */
+.mili:hover {
+    background-color: red;
+    height: 320px;
+}
+
+/* Span styling */
+span {
+    font-weight: bold;
+    color: black;
+}
+
+/* Container for YouTube section */
+.yoiut {
+    display: flex;
+    height: 245px;
+    width: 100%;
+    background-color: rgb(90, 88, 86);
+    margin: 85px auto;
+    justify-content: space-around;
+}
+
+/* YouTube image styling */
+.youtubeimg {
+    height: 165px;
+    width: 290px;
+}
+
+/* List styling */
+.list {
+    margin: 0 auto;
+    font-size: 40px;
+    text-align: left;
+}
+
+/* Button styling */
+.butt {
+    display: block;
+    margin: 20px auto;
+}
+
+/* Dropdown container styling */
+.dropdown {
+    margin: 20px auto;
+    text-align: center;
+    position: relative;
+}
+
+/* Dropdown button styling */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: white;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* Hover effect for navbar links and dropdown button */
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+/* Dropdown content container styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Individual dropdown content link styling */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+/* Hover effect for dropdown content links */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Display dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Media Queries */
+/* At 175% zoom level, display in 2 columns */
+@media (min-width: 800px) and (max-width: 1360px) {
+    .characterimg {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .charimg {
+        width: 80%;
+        height: auto;
+    }
+    .yoiut {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .youtubeimg {
+        width: 80%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
+
+/* At 400% zoom level, display in 2 rows and 2 columns
+@media (min-width: 1361px) {
+    .characterimg {
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .charimg {
+        width: 45%;
+        height: auto;
+        margin: 2.5%;
+    }
+    .yoiut {
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .youtubeimg {
+        width: 45%;
+        height: auto;
+        margin: 2.5%;
+    }
+}
+
+@media (max-width: 400px) {
+    .characterimg, .yoiut {
+        width: 100%;
+        margin-left: 0;
+    }
+    .dropdown {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .dropbtn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 150px) {
+    .heading, .list, .butt {
+        font-size: medium;
+        margin: 10px auto;
+    }
+    .dropdown-content a {
+        text-align: center;
+    }
+} */

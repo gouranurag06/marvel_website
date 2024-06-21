@@ -1,0 +1,256 @@
+
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.outter_nav {
+    background-color: #202020;
+    height: 52px;
+    display: flex;
+    border: 1px solid #393939;
+    justify-content: space-evenly;
+    
+}
+.avtar_logo{
+    display: flex;
+    align-items: center;
+}
+  #avtar {
+    margin: 0 8px 0 20px;
+    width: 20px;
+    height: 20px;
+    color: white;
+  } 
+
+.user_menu{
+    margin-left: 170px; 
+    display: flex;
+    align-items: center;
+   border-left: 1px solid #393939;
+   border-right: 1px solid #393939;
+}
+.login_join{
+    display: flex;
+    align-items: center;
+}
+.log{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: RobotoCondensed Bold Trebuchet MS Helvetica Arial sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+}
+.tab{
+    color: #ffffff;
+    margin: 0 11px o 8px
+}
+.join{
+    margin: 0 8px 0 0;
+    color: #ffffff;
+    font-family: RobotoCondensed Bold Trebuchet MS Helvetica Arial sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.marvell_logo{
+    display: flex;
+    height: 52px;
+    width: 130px;
+    justify-content: center;
+    margin: 0 308px 0 367px;
+}
+.subscribe{
+    display: flex;
+    border-left: 1px solid #393939;
+    border-right: 1px solid #393939;
+    padding-left: 15px;
+    padding-right: 15px;
+    align-items: center;
+}
+.u_logo{
+    height: 25px;
+    margin: 10px;
+}
+.nav_text{
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-align: center;
+}
+ .search{
+       margin: 0;
+       display: flex;
+     border-right: 1px solid #393939;
+     align-items: center;
+     justify-content: center;
+
+   }
+   #search_logo{
+       color: #ffffff;
+       padding-right: 15px;
+     padding-left: -25px;
+   }
+   .navbar {
+    background-color: #202020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+.nav-links a {
+    color: white;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.nav-links a:hover {
+    text-decoration: underline solid red;
+}
+.icon {
+    display: none;
+    color: white;
+    position: absolute;
+    right: 20px;
+    font-size: 18px;
+}
+@media screen and (max-width: 950px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #202020;
+        text-align: center;
+    }
+    .navbar a.icon {
+        display: block;
+    }
+    .navbar.responsive .nav-links {
+        display: flex;
+    }
+    .navbar.responsive .nav-links a {
+        display: block;
+        padding: 12px;
+    }
+}
+.marvel_content{
+    background-color: #151515;
+    display: flex;
+    height: 40px;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.dedpool_content{
+    position: relative;
+}
+.news_section{
+    background-image: url("marvel_news.jpg");
+    height: 375px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+
+}
+.news_text{
+    color: #ffffff;
+
+}
+.section_1{
+    background-color: #000;
+    height: 62px;
+    display: flex;
+    margin-top: 20px;
+}
+.section1_img{
+    height: 62px;
+    width: 308px;
+    margin-left: 136px;
+    
+}
+.marvel_moviies{
+    color: darkred;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.latest_h2{
+    color: #000;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-left: 156px;
+    margin-bottom: 5px;
+}
+.latest_content{
+    display: flex;
+ margin-left: 156px;
+}
+.latest_img{
+    height: 340px;
+    width: 600px; 
+}
+.lattest_ttex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 35px;
+    text-wrap: balance;
+}
+.dedpool_img{
+    height: 222px;
+    width: 393px;
+}
+.latest_movies{
+    display: flex;
+    margin-left: 150px;
+    margin-top: 26px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+.dedpool_movies{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.dedpool_text{
+    color: #000;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+   text-wrap: balance;
+   text-align: center;
+}
+#fantastic_text{
+    margin-left: -20px;
+}
+.section_2{
+    background-color: #000;
+    height: 62px;
+    display: flex;
+    margin-top: 20px;
+}
+.marvel_comics{
+    color: darkred;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.footer_one{
+    background-color: #000;
+    height: 354px;
+}
+.footer_img{
+    margin: 10px 0 10px 155px;
+}

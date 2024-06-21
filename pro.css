@@ -1,0 +1,566 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.outter_nav {
+    background-color: #202020;
+    height: 52px;
+    display: flex;
+    border: 1px solid #393939;
+    justify-content: space-evenly;
+    
+}
+.avtar_logo{
+    display: flex;
+    align-items: center;
+}
+  #avtar {
+    margin: 0 8px 0 20px;
+    width: 20px;
+    height: 20px;
+    color: white;
+  } 
+
+.user_menu{
+    margin-left: 170px; 
+    display: flex;
+    align-items: center;
+   border-left: 1px solid #393939;
+   border-right: 1px solid #393939;
+}
+.login_join{
+    display: flex;
+    align-items: center;
+}
+.log{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: RobotoCondensed Bold Trebuchet MS Helvetica Arial sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+}
+.tab{
+    color: #ffffff;
+    margin: 0 11px o 8px
+}
+.join{
+    margin: 0 8px 0 0;
+    color: #ffffff;
+    font-family: RobotoCondensed Bold Trebuchet MS Helvetica Arial sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.marvell_logo{
+    display: flex;
+    height: 52px;
+    width: 130px;
+    justify-content: center;
+    margin: 0 308px 0 367px;
+}
+.subscribe{
+    display: flex;
+    border-left: 1px solid #393939;
+    border-right: 1px solid #393939;
+    padding-left: 15px;
+    padding-right: 15px;
+    align-items: center;
+}
+.u_logo{
+    height: 25px;
+    margin: 10px;
+}
+.nav_text{
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-align: center;
+}
+ .search{
+       margin: 0;
+       display: flex;
+     border-right: 1px solid #393939;
+     align-items: center;
+     justify-content: center;
+
+   }
+   #search_logo{
+       color: #ffffff;
+       padding-right: 15px;
+     padding-left: -25px;
+   }
+   .navbar {
+    background-color: #202020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+.nav-links a {
+    color: white;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.nav-links a:hover {
+    text-decoration: underline solid red;
+}
+.icon {
+    display: none;
+    color: white;
+    position: absolute;
+    right: 20px;
+    font-size: 18px;
+}
+@media screen and (max-width: 950px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #202020;
+        text-align: center;
+    }
+    .navbar a.icon {
+        display: block;
+    }
+    .navbar.responsive .nav-links {
+        display: flex;
+    }
+    .navbar.responsive .nav-links a {
+        display: block;
+        padding: 12px;
+    }
+}
+.marvel_content{
+    background-color: #151515;
+    display: flex;
+    height: 40px;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.dedpool_content{
+    position: relative;
+}
+.dedpool_text{
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    color: white;
+    font-size: 25px;
+}
+@media (max-width: 768px) {
+    .marvel_content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .marvel_content img {
+        margin: 0 0 10px 0;
+    }
+    .text1 p {
+        margin: 10px 0 0 0;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .marvel_content {
+        padding: 5px;
+    }
+    .marvel_content img {
+        height: 30px;
+        width: 70px;
+    }
+    .text1 p {
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+}
+.text{
+    font: 16px;
+    color: #fff;
+}
+.watch_now{
+    position: relative;
+    display: inline-block;
+    padding: 0 35px;
+    color: #fff;
+    background-color: #e62429;
+    font: 800 14px;
+    border-style: solid;
+    border-color: #e62429;
+    box-sizing: border-box;
+    border-width: 0 0 16px 16px;
+    border-radius: 8%;
+    text-align: center;
+    margin: 0 15px 15px 0;
+}
+.tab_component{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+    background-color: transparent;
+    bottom: 0;
+    left: 10px;
+    
+}
+.tab_container{
+    padding: 0 0 17px;
+    margin: -17px 0 0;
+    display: flex;
+    position: relative;
+    top: 17px;
+    width: 100%;
+}
+.tab_btn{
+    position: relative;
+    width: 13%;
+    min-width: 110px;
+    margin: 0;
+    text-transform: capitalize;
+    border-bottom: none;
+    box-sizing: content-box;
+    vertical-align: top;
+    white-space: normal;
+    padding: 20px 30px 20px 0;
+    left: 10;
+    
+    
+}
+.tabs{
+    display: inline-block;
+    text-decoration: none;
+    color: #151515;
+    font: 400 14px;
+}
+.tabs:hover{
+  color: #e62429;
+}
+.social-link{
+   position: absolute;
+   z-index: 80;
+   right: 0;
+   max-width: 1240px;
+   margin: 0 auto;
+   display: block;
+   padding: 30px -20px 15px 20px;
+}
+#social_img{
+margin: 0 0 0 30px;
+position: relative;
+top: -2px;
+width: 18;
+height: 18;
+color: #767676;
+bottom: 15px;
+padding: 30px -20px 15px 20px;
+}
+
+.img_banner{
+    width: 100%;
+    height: 525px;
+
+}
+.h2{
+    position: relative;
+    line-height: 9;
+    font: 800 26px / 1 RobotoCondensed, Trebuchet MS, Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+    right: -10px;
+}
+body ul{
+    margin: 0;
+    padding: 0;
+}
+.mainhor {
+    align-items: center;
+    height: 380px;
+    width: 1180px;
+    margin-left: 50px;
+    background-color: rgb(248, 242, 242);
+    display: flex;
+    align-self: center;
+}
+
+.horimg6 {
+    padding-right: 15px;
+}
+
+.text_1 {
+    color: black;
+    margin-left: 50px;
+    
+}
+.imgg1{
+    height: 260px;
+    width: 170px;
+    margin-left: 40px;
+}
+.text_1:hover {
+    color: red;
+}
+
+.horimg1:hover,
+.horimg2:hover,
+.horimg3:hover,
+.horimg4:hover,
+.horimg5:hover,
+.horimg6:hover {
+    margin-bottom: 7px;
+    color: red;
+    transition: 0.15s;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  .container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.imgofbanner{
+	height: 525%;
+	width: 100%;
+}
+
+
+
+.lastIMG{
+    width: 100%;
+    margin-bottom: -8px;
+}
+
+
+
+.footer{
+	background-color: rgb(21, 21, 21);
+    padding: 70px 0;
+}
+.footer-col{
+   width: 20%;
+   padding: 0 15px;
+   color: white;
+}
+
+.contenttt {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+}
+.feed {
+    flex: 2;
+    margin-left: 120px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 880px;
+}
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    text-align: center;
+    margin-right: 12px;
+    height: 800px;
+}
+.hype_box{
+    padding: 0 0 10px;
+    font: 800 26px / 1 RobotoCondensed, Trebuchet MS, Helvetica, Arial, sans-serif;
+}
+.hype_text{
+    font-family: Roboto, Trebuchet MS, Helvetica, Arial, sans-serif;
+    font-size: .875rem;
+    padding: 0 15px 20px;
+    text-align: center;
+    line-height: 16px;
+}
+.hype_imgg{
+    height: 50px;
+    width: 90px;
+}
+.hype_contentt{
+    display: flex;
+    border-bottom: 1px solid #eaeaea;
+    align-items: center;
+
+}
+.hype_imgg_content{
+    font: 400 14px / Bold, ;
+    margin-bottom: 10px;
+    width: 176px;
+    height: 130px; 
+}
+.yssgard{
+    margin-left:  155px;
+}
+.yssgard_1{
+    color: #767676;
+    font: 400 12px;
+    letter-spacing: 1px;
+    margin-left: 155px;
+    margin-top: 8px;
+}
+.yssgard_2{
+    font: 26px;
+    color: #151515;
+    margin-top: 8px;
+    margin-left: 155px;
+    font: 800 26px; 
+}
+.yssgard_3{
+    display: flex;
+    margin-left: 155px;
+    margin-top: 5px;
+}
+.yss_img{
+    width: 27.8px;
+    height: 27.8px;
+}
+.yss_text{
+   font: 400 14px;
+}
+.yss_join{
+    margin: 0 0 0 5px;
+    color: #e62429;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.yssgard_4{
+    font: 400 16px;
+    letter-spacing: 1px;
+    margin: 16px 600px 20px 155px ;
+}
+
+.latest-header {
+    text-align: center;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 10px;
+}
+.latest-header h2 {
+    margin: 0;
+    font-size: 32px;
+    color: #333;
+}
+.news-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px 0;
+    border-bottom: 1px solid #eaeaea;
+    width: 850px;
+}
+.news-item:last-child {
+    border-bottom: none;
+}
+.infinity-image {
+    height: 240px;
+    width: 423px;
+    display: block;
+    margin-right: 20px;
+}
+.infinity-text {
+    color: #151515;
+    font-weight: 450;
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+.infinity-text:hover{
+    color: #e62429;
+}
+
+
+@media (max-width: 768px) {
+    .contenttt {
+        flex-direction: column;
+    }
+    .feed {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .news-item {
+        flex-direction: column;
+        align-items: center;
+    }
+    .infinity-image {
+        margin: 0 0 10px 0;
+        width: 100%;
+        height: auto;
+    }
+    .infinity-text {
+        text-align: center;
+        width: 100%;
+    }
+    
+}
+.imgoff{
+  color: white;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: white;
+	text-decoration: none;
+	font-weight: 300;
+	color: white;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: rgb(104, 98, 98);
+	
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	color: rgb(57, 57, 57);
+	font-size: 25px;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 50%;
+	padding: 23px;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: white;
+	
+}
+
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}

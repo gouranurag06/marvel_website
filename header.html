@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+
+        .outer_nav {
+            background-color: #202020;
+            height: 52px;
+            display: flex;
+            border: 1px solid #393939;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+        }
+
+        .avtar_logo {
+            display: flex;
+            align-items: center;
+        }
+
+        #avtar {
+            margin: 0 8px 0 20px;
+            width: 20px;
+            height: 20px;
+            color: white;
+        }
+
+        .user_menu {
+            display: flex;
+            align-items: center;
+            border-left: 1px solid #393939;
+            padding-left: 10px;
+        }
+
+        .login_join {
+            display: flex;
+            align-items: center;
+        }
+
+        .log,
+        .join {
+            text-decoration: none;
+            color: #ffffff;
+            font-family: RobotoCondensed, Trebuchet MS, Helvetica, Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .tab {
+            color: #ffffff;
+            margin: 0 11px 0 8px;
+        }
+
+        .join {
+            margin: 0 8px 0 0;
+        }
+
+        .marvell_logo {
+            display: flex;
+            height: 52px;
+            width: 130px;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .subscribe {
+            display: flex;
+            align-items: center;
+            border-left: 1px solid #393939;
+            padding-left: 10px;
+        }
+
+        .u_logo {
+            height: 25px;
+            margin: 10px;
+        }
+
+        .nav_text {
+            color: #ffffff;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+            border-left: 1px solid #393939;
+            padding-left: 10px;
+        }
+
+        .search_logo {
+            color: #ffffff;
+            padding-right: 15px;
+            padding-left: -25px;
+        }
+
+        .search input {
+            background-color: #303030;
+            border: 1px solid #393939;
+            color: white;
+            padding: 5px;
+        }
+
+        .search button {
+            background-color: #393939;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .navbar {
+            background-color: #202020;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-align: center;
+            padding: 14px 30px;
+            text-decoration: none;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline solid red;
+        }
+
+        .icon {
+            display: none;
+            color: white;
+            position: absolute;
+            left: 20px;
+            font-size: 18px;
+        }
+
+        @media screen and (max-width: 950px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #202020;
+                text-align: center;
+            }
+
+            .navbar a.icon {
+                display: block;
+            }
+
+            .navbar.responsive .nav-links {
+                display: flex;
+            }
+
+            .navbar.responsive .nav-links a {
+                display: block;
+                padding: 12px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .outer_nav {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+
+            .marvell_logo {
+                margin: 10px 0;
+            }
+
+            .subscribe,
+            .search {
+                border-left: none;
+                padding-left: 0;
+            }
+
+            .search input {
+                width: 100px;
+            }
+        }
+
+        .marvel_content {
+            background-color: #151515;
+            display: flex;
+            height: 40px;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 40px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  border-radius: 40px;
+  width: 40%; /* Could be more or less, depending on screen size */
+  position: relative;
+  box-sizing: border-box;
+}
+
+.conataineree {
+  background: url('marvel_image.jpg') no-repeat center center;
+  background-size: cover;
+  height: 200px;
+  border-radius: 40px 40px 0 0;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 80%;
+  }
+
+  .conataineree {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal-content {
+    width: 95%;
+  }
+
+  .conataineree {
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+/* joincss */
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.conataineree {
+  width: 85%;
+  /* background: url('c:/Users/goura/OneDrive/Desktop/Marvell-website/Marvel.com _ The Official Site for Marvel Movies, Characters, Comics, TV_files/marvel_images.png') no-repeat center center; */
+  background-size: cover;
+  height: 200px;
+  border-radius: 40px 40px 0 0;
+  padding: 16px;
+  color: white;
+  text-align: center;
+}
+
+.conataineree img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 40px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+  background-color: black;
+  border-radius: 0 0 40px 40px;
+  color: white;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+  color: red;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: black;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  border-radius: 40px;
+  width: 30%; /* Could be more or less, depending on screen size */
+  position: relative;
+  box-sizing: border-box;
+  color: white;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 80%;
+  }
+
+  .conataineree {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal-content {
+    width: 95%;
+  }
+
+  .conataineree {
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <!--NAVBAR-->
+        <div class="outer_nav">
+            <!--B0X-1 AVTAR-LOGO,LOGIN,JOIN-->
+            <div class="user_menu">
+                <div class="avtar_logo">
+                    <!--AVTAR-LOGO -->
+                    <i id="avtar" class="fas fa-snowflake"></i>
+                </div>
+                <!--LOGIN AND JOIN -->
+                <div class="login_join">
+                    <button class="loginbut" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                    <span class="tab"> &nbsp;| &nbsp;</span>
+                    <button class="loginbut" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Join</button>
+                </div>
+            </div>
+            <div id="id01" class="modal">
+                <div class="modal-content animate">
+                  <div class="conataineree"></div>
+                  <span class="close" onclick="document.getElementById('id01').style.display='none'">&times;</span>
+                  <form id="loginForm" class="form-container">
+                    <div class="container">
+                      <p style="text-align: center; margin: 25px;">
+                        Enter your email to continue
+                      </p>
+                      <span style="text-align: center; margin: 25px; display: block;">
+                        Log in to Marvel with your MyDisney account. If you don't have one you will be prompted to create one.
+                      </span>
+                      <input type="text" id="email" placeholder="Email" name="uname" required>
+                      <button id="continueButton" style="background-color: #f44336;" type="submit">Continue</button>
+                    </div>
+                    <hr>
+                    <p style="text-align: center;">
+                      Marvel is part of The Walt Disney Family of Companies.
+                    </p>
+                    <p style="text-align: center;">
+                      MyDisney lets you seamlessly log in to services and experiences across The Walt Disney Family of Companies, such as Disney+, ESPN, Walt Disney World.
+                    </p>
+                  </form>
+                </div>
+              </div>
+
+              <!-- join code -->
+              <div id="id01" class="modal">
+                <div class="modal-content animate">
+                  <div class="conataineree">
+                      <p>ENHANCE YOUR MARVEL EXPERIENCE</p>
+                      <!-- <img src="c:\Users\goura\OneDrive\Desktop\Marvell-website\Marvel.com _ The Official Site for Marvel Movies, Characters, Comics, TV_files\marvel_images.png" alt=""> -->
+                  </div>
+                  <form id="joinForm" class="container">
+                    <p>Earn points for what you already do as a Marvel fan and redeem for cool rewards as a Marvel Insider.</p>
+                    <p>Unlock the world of Marvel Digital Comics! Your key for reading Marvel Unlimited and Digital Comic purchases across multiple devices.</p>
+                    <p>Get the latest news, original content, and special offers from Marvel.</p>
+                    <input type="text" id="email" placeholder="Email" name="uname" required>
+                    <button id="continueButton" style="background-color: #f44336;" type="submit">Continue</button>
+                    <p>Already have an account? Log In</p>
+                  </form>
+                </div>
+              </div>
+            <!--MARVEL LOGO-->
+            <a class="marvell_logo" href="#">
+                <img class="marvell_logo" src="marvel_logo.jpg" alt="marvel_logo">
+            </a>
+            <!--box-3-->
+            <div class="subscribe">
+                <img class="u_logo" src="U-logo.png" alt="u-logo">
+                <div class="nav_text">
+                    <p style="font-size: 12px;">marvel unlimited</p>
+                    <span style="font-size: 10px;">subscribe</span>
+                </div>
+            </div>
+            <!--box-4 SEARCH-->
+            <div class="search">
+                <div class="search_logo">
+                    <i id="search_logo" class="fas fa-magnifying-glass"></i>
+                </div>
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+        </div>
+        <!--Link-->
+        <div class="navbar" id="myNavbar">
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div class="nav-links">
+                <a href="news.html"><strong>NEWS</strong></a>
+                <a href="comics.html"><strong>COMICS</strong></a>
+                <a href="character/index.html"><strong>CHARACTER</strong></a>
+                <a href="https://www.marvel.com/movies"><strong>MOVIES</strong></a>
+                <a href="https://www.marvel.com/tv-shows"><strong>TV SHOW</strong></a>
+                <a href="https://www.marvel.com/games"><strong>GAMES</strong></a>
+                <a href="https://www.marvel.com/watch"><strong>VIDEO</strong></a>
+                <a href="#"><strong>MORE</strong></a>
+            </div>
+        </div>
+    </header>
+    <div class="marvel_content">
+        <a href="#"><img style="height: 35px; width: 78px; margin: 0 0 0 10px;"
+                src="disney-logo.png" alt="disney logo"></a>
+        <div class="text1">
+            <p style="color: #fff; letter-spacing: 1px;">STREAM X-MEN '97 EXCLUSIVELY ON</p>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            var navbar = document.getElementById("myNavbar");
+            if (navbar.className === "navbar") {
+                navbar.className += " responsive";
+            } else {
+                navbar.className = "navbar";
+            }
+        }
+    </script>
+    <script>
+        //get the image name currently in display
+        //find the index of currently displayed image in array
+        //compute the next index
+        //update the image source to the value at next index'
+        let arr = ["newimg_files/image1.jpg", "newimg_files/image2.jpg", "newimg_files/image3.jpg", "newimg_files/image4.jpg"];
+        let image = document.getElementById("decadpol_img");
+
+        let next1 = function () {
+            let img = image.getAttribute('src');
+            let index = arr.indexOf(img);
+            let nextImage = (index + 1) % arr.length;
+            image.setAttribute('src', arr[nextImage]);
+        };
+
+        let previous1 = function () {
+            let img = image.getAttribute('src');
+            let index = arr.indexOf(img);
+            let previousIndex = index - 1;
+
+            if (previousIndex < 0)
+                previousIndex = arr.length - 1;
+
+            image.setAttribute('src', arr[previousIndex]);
+        };
+
+        setInterval(next1, 3000);
+    </script>
+    <!-- loginscript -->
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+      
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      
+        // Add event listener to the continue button
+        document.getElementById('continueButton').addEventListener('click', function(event) {
+          event.preventDefault(); // Prevent the form from submitting
+      
+          // Get the email value
+          var email = document.getElementById('email').value;
+      
+          // Store the email in local storage
+          localStorage.setItem('userEmail', email);
+      
+          // Show an alert to the user
+          alert('Login details saved. Welcome, ' + email + '!');
+      
+          // Close the modal
+          modal.style.display = 'none';
+        });
+      </script>
+      <!-- join script -->
+      <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+      
+        // Add event listener to the continue button
+        document.getElementById('continueButton').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+      
+            // Get the email value
+            var email = document.getElementById('email').value;
+      
+            // Store the email in local storage
+            localStorage.setItem('userEmail', email);
+      
+            // Show an alert to the user
+            alert('Login details saved. Welcome, ' + email + '!');
+      
+            // Close the modal
+            modal.style.display = 'none';
+        });
+      </script>
+</body>
+
+</html>

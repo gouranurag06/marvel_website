@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .hide {
+            display: none;
+            color: red; /* Added for text color change */
+        }
+
+        .latest_movies {
+            width: 80%;
+            display: flex;
+        }
+
+        .dedpool_img {
+            width: 360px;
+            position: absolute;;
+            padding-right: 25px; /* Changed from 25% to 25px for better spacing */
+        }
+
+        .dedpool_text {
+            width: 360px;
+            padding-right: 25px; /* Changed from 25% to 25px for better spacing */
+        }
+    </style>
+</head>
+<body>
+
+<h2>Display an Element on Mouseover and Mousemove</h2>
+
+<div class="myDIV">news</div>
+<div class="hide">
+    <div class="latest_movies">
+        <div class="dedpool_movies">
+            <img class="dedpool_img" src="Marvel.com _ The Official Site for Marvel Movies, Characters, Comics, TV_files/marvel_images (7).jpg" alt="">
+            <p class="dedpool_text">Deadpool & Wolverine's 'Weapon X-Traction' Team-Up Gets Special Variant Covers</p>
+        </div>
+        <div class="dedpool_movies">
+            <img class="dedpool_img" src="Marvel.com _ The Official Site for Marvel Movies, Characters, Comics, TV_files/marvel_images (8).jpg" alt="">
+            <p class="dedpool_text">May 29's New Marvel Comics: The Full List</p>
+        </div>
+        <div class="dedpool_movies">
+            <img class="dedpool_img" src="Marvel.com _ The Official Site for Marvel Movies, Characters, Comics, TV_files/marvel_images (9).jpg" alt="">
+            <p class="dedpool_text">'X-Men: Blood Hunt – Magik' #1 First Look Unleashes Magik on a Vampire Horde</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // JavaScript for mouseover and mousemove events
+
+    // Select the elements
+    const myDiv = document.querySelector('.myDIV');
+    const hideDiv = document.querySelector('.hide');
+
+    // Add mouseover event listener
+    myDiv.addEventListener('mouseover', function () {
+        hideDiv.style.display = 'block';
+    });
+
+    // Add mousemove event listener
+    myDiv.addEventListener('mousemove', function (event) {
+        // Adjust the position of .hide based on mouse movement
+        const offsetX = 10; // Adjust as needed
+        const offsetY = 10; // Adjust as needed
+
+        hideDiv.style.left = event.pageX + offsetX + 'px';
+        hideDiv.style.top = event.pageY + offsetY + 'px';
+    });
+
+    // Add mouseout event listener to hide .hide when mouse leaves .myDIV
+    myDiv.addEventListener('mouseout', function () {
+        hideDiv.style.display = 'none';
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Slideshow</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .deadpool_content {
+            position: relative;
+            width: 100%;
+            max-width: 800px; /* You can adjust this value */
+            height: auto;
+            overflow: hidden;
+        }
+        .deadpool_content img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Media queries for different screen sizes */
+        @media (max-width: 1200px) {
+            .deadpool_content {
+                max-width: 1520px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .deadpool_content {
+                max-width: 600px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .deadpool_content {
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="deadpool_content">
+        <img id="deadpool_img" src="WhatsApp Image 2024-06-20 at 6.47.06 PM.jpeg" alt="deadpoolIMG">
+    </div>
+    <script>
+        // Array of image file paths
+        let arr = [
+            "WhatsApp Image 2024-06-20 at 6.47.06 PM.jpeg",
+            "WhatsApp Image 2024-06-20 at 6.55.41 PM.jpeg",
+            "WhatsApp Image 2024-06-20 at 7.04.34 PM.jpeg",
+            "WhatsApp Image 2024-06-20 at 7.12.48 PM.jpeg",
+        ];
+
+        // Get the image element by its ID
+        let image = document.getElementById("deadpool_img");
+
+        // Function to display the next image
+        let next1 = function(){
+            let img = image.getAttribute('src'); // Get current image source
+            let index = arr.indexOf(img); // Find the index of the current image
+            let nextImage = (index + 1) % arr.length; // Compute the next index (circular)
+            image.setAttribute('src', arr[nextImage]); // Update image source to next image
+        };
+
+        // Function to display the previous image
+        let previous1 = function(){
+            let img = image.getAttribute('src'); // Get current image source
+            let index = arr.indexOf(img); // Find the index of the current image
+            let previousIndex = index - 1; // Compute the previous index
+
+            // If the previous index is less than 0, wrap around to the last image
+            if(previousIndex < 0)
+                previousIndex = arr.length - 1;
+            
+            image.setAttribute('src', arr[previousIndex]); // Update image source to previous image
+        };
+
+        // Automatically change the image every 3 seconds
+        setInterval(next1, 3000);  
+    </script>
+</body>
+</html>
